@@ -1,13 +1,12 @@
 <!--
 ============================================
-; Title: Exercise 6.2
+; Title: Exercise 6.3
 ; Author: Professor Krasso
 ; Date: 25 March 2020
 ; Modified By: Diandra McKenzie
-; Description: View Model Function Objects
+; Description: View Model Object Literals
 ;===========================================
 -->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +17,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <title>Exercise 6.2</title>
+    <title>Exercise 6.3</title>
 
     <!-- Stylesheet - Bootstrap -->
     <link
@@ -33,7 +32,7 @@
   </head>
   <body>
 
-    <!-- Nav Bar -->
+     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
           <li class="nav-item active">
@@ -51,7 +50,7 @@
       <div class="container" role="main">
         <br /><br />
 
-        <h2>Person View Model</h2>
+        <h2>Person Object Literal Example</h2>
 
         <div class="form-group">
             <label for="txtFirstName">First Name:</label>
@@ -72,13 +71,13 @@
 
     <script>
 
-        function PersonViewModel() {
-            this.firstName = ko.observable("Michelle");
-            this.lastName = ko.observable("Obama");
-            this.email = ko.observable("michelleb@flotus.com");
-        }
+        var personViewModel = {
+            firstName: "Ellen",
+            lastName: "DeGeneres",
+            email: "ED@ellen.com"
+        };
 
-        ko.applyBindings(new PersonViewModel());
+        ko.applyBindings(personViewModel);
 
     </script>
   </body>
